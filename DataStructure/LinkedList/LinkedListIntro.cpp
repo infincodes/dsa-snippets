@@ -11,6 +11,7 @@ public:
         next = NULL;
     }
 };
+//print
 void printList(Node* head) {
     Node* temp = head;
     while (temp != NULL) {
