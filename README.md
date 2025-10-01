@@ -6,59 +6,40 @@ A comprehensive collection of Data Structures and Algorithms implementations in 
 
 ```
 dsa-snippets/
-├── algorithms/
+├── Algorithm/
 │   ├── sorting/
-│   │   ├── bubble_sort/
-│   │   ├── quick_sort/
-│   │   ├── merge_sort/
-│   │   └── ...
-│   ├── searching/
-│   │   ├── binary_search/
-│   │   ├── linear_search/
-│   │   └── ...
-│   ├── graph/
-│   │   ├── bfs/
-│   │   ├── dfs/
-│   │   ├── dijkstra/
-│   │   └── ...
-│   ├── dynamic_programming/
-│   │   ├── fibonacci/
-│   │   ├── knapsack/
-│   │   └── ...
-│   └── string/
-│       ├── kmp/
-│       ├── rabin_karp/
-│       └── ...
-├── data_structures/
-│   ├── arrays/
-│   ├── linked_lists/
-│   ├── stacks/
-│   ├── queues/
-│   ├── trees/
-│   ├── heaps/
-│   ├── hash_tables/
-│   └── graphs/
-├── tests/
-│   ├── algorithms/
-│   └── data_structures/
-├── docs/
-│   ├── complexity_analysis.md
-│   ├── language_guides/
-│   └── algorithm_explanations/
-├── .github/
-│   ├── ISSUE_TEMPLATE/
-│   └── workflows/
+│   │   ├── bubble.cpp
+│   │   ├── heap.cpp
+│   │   ├── insertion.cpp
+│   │   ├── merge.cpp
+│   │   ├── quick.cpp
+│   │   └── selection.cpp
+│   └── searching/
+│       ├── Binary_Search.cpp
+│       ├── Exponential_Search.cpp
+│       ├── Interpolation_Search.cpp
+│       ├── Jump_Search.cpp
+│       └── Linear_Search.cpp
+├── DataStructure/
+│   ├── LinkedList/
+│   │   ├── DoubleLinkedList.cpp
+│   │   └── LinkedListIntro.cpp
+│   └── Tree/
+│       ├── PostfixInfixPrefix.cpp
+│       └── TreeIntro.cpp
 ├── CONTRIBUTING.md
 ├── CODE_OF_CONDUCT.md
+├── ISSUES.md
 └── LICENSE
 ```
 
 ## 🌟 Features
 
-- **Multi-language Support**: Implementations in C++, Python, Java, JavaScript, Go, and more
-- **Comprehensive Testing**: Unit tests for all implementations
-- **Detailed Documentation**: Time/space complexity analysis and explanations
-- **Beginner Friendly**: Clear comments and step-by-step explanations
+- **C++ Implementations**: Currently focused on C++ implementations of fundamental algorithms
+- **Sorting Algorithms**: Complete collection of essential sorting algorithms
+- **Searching Algorithms**: Various searching techniques with different complexities
+- **Data Structures**: Basic implementations of LinkedList and Tree structures
+- **Clean Code**: Well-structured and readable implementations
 - **Interview Ready**: Common coding interview problems and solutions
 
 ## 🚀 Quick Start
@@ -72,25 +53,36 @@ dsa-snippets/
 2. **Browse algorithms by category**
    ```bash
    # View sorting algorithms
-   ls algorithms/sorting/
+   ls Algorithm/sorting/
+   
+   # View searching algorithms
+   ls Algorithm/searching/
    
    # View data structures
-   ls data_structures/
+   ls DataStructure/
    ```
 
-3. **Run an algorithm**
+3. **Compile and run algorithms**
    ```bash
-   # Example: Run Python quick sort
-   python algorithms/sorting/quick_sort/quick_sort.py
+   # Example: Compile and run quick sort
+   g++ Algorithm/sorting/quick.cpp -o quick_sort
+   ./quick_sort
    
-   # Example: Compile and run C++ binary search
-   g++ algorithms/searching/binary_search/binary_search.cpp -o binary_search
+   # Example: Compile and run binary search
+   g++ Algorithm/searching/Binary_Search.cpp -o binary_search
    ./binary_search
+   
+   # Example: Compile and run linked list
+   g++ DataStructure/LinkedList/LinkedListIntro.cpp -o linked_list
+   ./linked_list
    ```
 
-## 📚 Supported Languages
+## 📚 Currently Supported Languages
 
-- **C++** (.cpp)
+- **C++** (.cpp) - Primary language for all current implementations
+
+## 🎯 Planned Language Support
+
 - **Python** (.py)
 - **Java** (.java)
 - **JavaScript** (.js)
@@ -104,12 +96,13 @@ We welcome contributions from developers of all skill levels! Here's how you can
 
 ### Ways to Contribute
 
-1. **Add new algorithms** - Implement algorithms in different languages
-2. **Add data structures** - Implement fundamental data structures
-3. **Write tests** - Add unit tests for existing implementations
-4. **Improve documentation** - Add explanations, complexity analysis
-5. **Fix bugs** - Report and fix issues in existing code
-6. **Add examples** - Provide usage examples and test cases
+1. **Add new algorithms** - Implement new algorithms in C++ or other languages
+2. **Add data structures** - Implement additional data structures
+3. **Multi-language support** - Add Python, Java, JavaScript implementations
+4. **Improve documentation** - Add README files, complexity analysis, and comments
+5. **Add test cases** - Create comprehensive test suites
+6. **Fix bugs** - Report and fix issues in existing implementations
+7. **Code optimization** - Improve existing implementations
 
 ### Getting Started
 
@@ -138,12 +131,24 @@ Thanks to all the amazing contributors who have helped build this repository!
 
 ## 📊 Complexity Reference
 
+### Sorting Algorithms
 | Algorithm | Best Case | Average Case | Worst Case | Space |
 |-----------|-----------|--------------|------------|-------|
 | Bubble Sort | O(n) | O(n²) | O(n²) | O(1) |
+| Selection Sort | O(n²) | O(n²) | O(n²) | O(1) |
+| Insertion Sort | O(n) | O(n²) | O(n²) | O(1) |
 | Quick Sort | O(n log n) | O(n log n) | O(n²) | O(log n) |
 | Merge Sort | O(n log n) | O(n log n) | O(n log n) | O(n) |
+| Heap Sort | O(n log n) | O(n log n) | O(n log n) | O(1) |
+
+### Searching Algorithms
+| Algorithm | Best Case | Average Case | Worst Case | Space |
+|-----------|-----------|--------------|------------|-------|
+| Linear Search | O(1) | O(n) | O(n) | O(1) |
 | Binary Search | O(1) | O(log n) | O(log n) | O(1) |
+| Jump Search | O(1) | O(√n) | O(√n) | O(1) |
+| Interpolation Search | O(1) | O(log log n) | O(n) | O(1) |
+| Exponential Search | O(1) | O(log n) | O(log n) | O(1) |
 
 ## 📄 License
 

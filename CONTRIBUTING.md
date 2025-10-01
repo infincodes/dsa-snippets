@@ -37,36 +37,39 @@ This project adheres to a Code of Conduct. By participating, you are expected to
 When adding a new algorithm:
 
 1. **Check existing implementations** to avoid duplicates
-2. **Create a new directory** under the appropriate category:
+2. **Add files directly** to the appropriate category folder:
    ```
-   algorithms/category/algorithm_name/
+   Algorithm/sorting/     - for sorting algorithms
+   Algorithm/searching/   - for searching algorithms
    ```
 3. **Follow the file naming convention**:
-   - `algorithm_name.cpp` (C++)
-   - `algorithm_name.py` (Python)
-   - `algorithm_name.java` (Java)
-   - `algorithm_name.js` (JavaScript)
+   - Use descriptive names like `bubble.cpp`, `Binary_Search.cpp`
+   - Currently focused on C++ implementations (.cpp)
+   - Future support planned for Python, Java, JavaScript
 
 ### 2. Adding Data Structures
 
 When implementing data structures:
 
-1. **Create a directory** under `data_structures/`:
+1. **Add files to appropriate directories** under `DataStructure/`:
    ```
-   data_structures/structure_name/
+   DataStructure/LinkedList/  - for linked list implementations
+   DataStructure/Tree/        - for tree-related implementations
    ```
 2. **Include all basic operations** (insert, delete, search, etc.)
 3. **Add comprehensive examples** showing usage
+4. **Follow existing naming patterns** like `LinkedListIntro.cpp`, `TreeIntro.cpp`
 
 ### 3. Adding Tests
 
-1. **Create test files** in the `tests/` directory
+1. **Create test files** alongside implementations or in a separate `tests/` directory
 2. **Mirror the source structure**:
    ```
-   tests/algorithms/sorting/bubble_sort/
-   tests/data_structures/linked_lists/
+   tests/Algorithm/sorting/
+   tests/DataStructure/LinkedList/
    ```
 3. **Include edge cases** and performance tests
+4. **Use appropriate testing frameworks** for each language
 
 ## 📝 Coding Standards
 
@@ -146,17 +149,43 @@ def bubble_sort(arr):
 
 ## 📁 File Structure Guidelines
 
-### Algorithm Directory Structure
+### Current Repository Structure
 ```
-algorithms/category/algorithm_name/
-├── algorithm_name.cpp
-├── algorithm_name.py
-├── algorithm_name.java
-├── algorithm_name.js
-├── README.md
-└── examples/
-    ├── input.txt
-    └── output.txt
+dsa-snippets/
+├── Algorithm/
+│   ├── sorting/
+│   │   ├── bubble.cpp
+│   │   ├── heap.cpp
+│   │   ├── insertion.cpp
+│   │   ├── merge.cpp
+│   │   ├── quick.cpp
+│   │   └── selection.cpp
+│   └── searching/
+│       ├── Binary_Search.cpp
+│       ├── Exponential_Search.cpp
+│       ├── Interpolation_Search.cpp
+│       ├── Jump_Search.cpp
+│       └── Linear_Search.cpp
+├── DataStructure/
+│   ├── LinkedList/
+│   │   ├── DoubleLinkedList.cpp
+│   │   └── LinkedListIntro.cpp
+│   └── Tree/
+│       ├── PostfixInfixPrefix.cpp
+│       └── TreeIntro.cpp
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+├── ISSUES.md
+└── LICENSE
+```
+
+### Recommended File Structure for New Contributions
+```
+Algorithm/category/
+├── algorithm_name.cpp (primary implementation)
+├── algorithm_name.py (future multi-language support)
+├── README.md (optional documentation)
+└── test_algorithm_name.cpp (optional tests)
 ```
 
 ### Required Files
