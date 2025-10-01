@@ -1,24 +1,36 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int main() {
-    vector<int> nums = {3, 2, 9, 3, 7, 2, 1};
-
-    for (int i = 0; i < nums.size() ; i++) {
-       int minIndex =i;
-       for(int j=i+1;j<nums.size();j++)
-       {
-        if(nums[j]<nums[minIndex])
-        {
-            minIndex=j;
+void selectionSort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        int minIndex = i;
+        // Find the minimum element in the unsorted part
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] < arr[minIndex])
+                minIndex = j;
         }
-       }
-       swap(nums[minIndex],nums[i]);
+        // Swap the found minimum with the first element
+        swap(arr[i], arr[minIndex]);
+    }
+}
+
+int main() {
+    int n;
+    cout << "Enter number of elements: ";
+    cin >> n;
+    int arr[n];
+    cout << "Enter elements: ";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
     }
 
-    for (int num : nums) {
-        cout << num << " ";
+    selectionSort(arr, n);
+
+    cout << "Sorted array: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
     }
+    cout << endl;
 
     return 0;
 }
