@@ -29,15 +29,18 @@ dsa-snippets/
 │       ├── kmp/
 │       ├── rabin_karp/
 │       └── ...
-├── data_structures/
-│   ├── arrays/
-│   ├── linked_lists/
-│   ├── stacks/
-│   ├── queues/
-│   ├── trees/
-│   ├── heaps/
-│   ├── hash_tables/
-│   └── graphs/
+├── DataStructure/
+│   ├── LinkedList/
+│   │   ├── DoubleLinkedList.cpp
+│   │   └── LinkedListIntro.cpp
+│   ├── Stack/
+│   │   ├── Stack.cpp
+│   │   └── Stack.java
+│   ├── Queue/
+│   │   ├── Queue.cpp
+│   │   └── Queue.java
+│   └── Tree/
+│       └── TreeIntro.cpp
 ├── tests/
 │   ├── algorithms/
 │   └── data_structures/
@@ -61,28 +64,45 @@ dsa-snippets/
 - **Beginner Friendly**: Clear comments and step-by-step explanations
 - **Interview Ready**: Common coding interview problems and solutions
 
+## 📊 Data Structures Available
+
+### Stack Implementation
+
+- **C++**: `DataStructure/Stack/Stack.cpp` - Complete stack implementation with push, pop, top operations
+- **Java**: `DataStructure/Stack/Stack.java` - Stack implementation using ArrayList
+- **Features**: LIFO (Last In First Out) principle, O(1) operations, comprehensive error handling
+
+### Queue Implementation
+
+- **C++**: `DataStructure/Queue/Queue.cpp` - Complete queue implementation with enqueue, dequeue operations
+- **Java**: `DataStructure/Queue/Queue.java` - Queue implementation using ArrayList
+- **Features**: FIFO (First In First Out) principle, front/rear access, comprehensive error handling
+
 ## 🚀 Quick Start
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/yourusername/dsa-snippets.git
    cd dsa-snippets
    ```
 
 2. **Browse algorithms by category**
+
    ```bash
    # View sorting algorithms
    ls algorithms/sorting/
-   
+
    # View data structures
    ls data_structures/
    ```
 
 3. **Run an algorithm**
+
    ```bash
    # Example: Run Python quick sort
    python algorithms/sorting/quick_sort/quick_sort.py
-   
+
    # Example: Compile and run C++ binary search
    g++ algorithms/searching/binary_search/binary_search.cpp -o binary_search
    ./binary_search
@@ -138,12 +158,12 @@ Thanks to all the amazing contributors who have helped build this repository!
 
 ## 📊 Complexity Reference
 
-| Algorithm | Best Case | Average Case | Worst Case | Space |
-|-----------|-----------|--------------|------------|-------|
-| Bubble Sort | O(n) | O(n²) | O(n²) | O(1) |
-| Quick Sort | O(n log n) | O(n log n) | O(n²) | O(log n) |
-| Merge Sort | O(n log n) | O(n log n) | O(n log n) | O(n) |
-| Binary Search | O(1) | O(log n) | O(log n) | O(1) |
+| Algorithm     | Best Case  | Average Case | Worst Case | Space    |
+| ------------- | ---------- | ------------ | ---------- | -------- |
+| Bubble Sort   | O(n)       | O(n²)        | O(n²)      | O(1)     |
+| Quick Sort    | O(n log n) | O(n log n)   | O(n²)      | O(log n) |
+| Merge Sort    | O(n log n) | O(n log n)   | O(n log n) | O(n)     |
+| Binary Search | O(1)       | O(log n)     | O(log n)   | O(1)     |
 
 ## 📄 License
 
